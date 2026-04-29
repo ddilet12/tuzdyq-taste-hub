@@ -1,7 +1,7 @@
 import { useLang } from '@/context/LangContext';
 import { ui } from '@/data/translations';
 import type { Lang } from '@/data/translations';
-import logo from '@/assets/tuzdyq-logo.jpeg';
+import logo from '@/assets/tuzdyq-hero.jpeg';
 import { MapPin, Clock } from 'lucide-react';
 
 const langs: { key: Lang; label: string }[] = [
@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="flex flex-col items-center pt-6 pb-4 px-4">
-      <img src={logo} alt="TUZDYQ" className="w-24 h-24 rounded-full border-2 border-primary object-cover mb-3" />
+      <img src={logo} alt="TUZDYQ" className="w-full max-w-md rounded-2xl border border-primary/40 object-cover mb-4 shadow-lg" />
 
       {/* Language switcher */}
       <div className="flex gap-1 mb-3">
