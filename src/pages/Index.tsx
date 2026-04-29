@@ -21,7 +21,7 @@ const Index = () => {
         <h2 className="text-lg font-semibold text-foreground mb-3">
           {categories[activeCategory][lang]}
         </h2>
-        <div className="space-y-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {filtered.map(item => (
             <MenuCard key={item.id} item={item} />
           ))}
