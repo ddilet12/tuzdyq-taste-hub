@@ -6,7 +6,7 @@ interface Props {
   onSelect: (cat: string) => void;
 }
 
-const categoryOrder = ['combo', 'kazakh', 'european', 'salads', 'breakfast', 'drinks'];
+const categoryOrder = ['salads', 'hot_appetizers', 'soups', 'kazakh', 'veal', 'poultry', 'sausages', 'pasta', 'steaks', 'fish', 'fried_fish', 'fish_sets', 'group', 'pizza', 'rolls', 'bakery', 'bread', 'sides', 'drinks'];
 
 const CategoryTabs = ({ active, onSelect }: Props) => {
   const { lang } = useLang();

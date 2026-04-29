@@ -13,10 +13,13 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
   const formatPrice = (p: number) => p.toLocaleString('ru-RU') + ' ' + ui.currency[lang];
 
   return (
-    <div className="flex items-center justify-between gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary/40 transition-colors">
+    <div className="flex items-start justify-between gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary/40 transition-colors">
       <div className="flex-1 min-w-0">
-        <h3 className="text-sm font-medium text-foreground leading-tight">{item.name[lang]}</h3>
-        <p className="text-primary font-semibold text-sm mt-1">{formatPrice(item.price)}</p>
+        <h3 className="text-sm font-semibold text-foreground leading-tight">{item.name[lang]}</h3>
+        {item.description?.[lang] && (
+          <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{item.description[lang]}</p>
+        )}
+        <p className="text-primary font-semibold text-sm mt-1.5">{formatPrice(item.price)}</p>
       </div>
       <div className="flex items-center gap-1.5 shrink-0">
         {qty > 0 ? (
