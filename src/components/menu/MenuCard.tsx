@@ -3,6 +3,7 @@ import { useCart } from '@/context/CartContext';
 import { ui } from '@/data/translations';
 import type { MenuItem } from '@/data/menuItems';
 import { categoryImages, fallbackImage } from '@/data/categoryImages';
+import { dishImages } from '@/data/dishImages';
 import { Plus, Minus } from 'lucide-react';
 
 const MenuCard = ({ item }: { item: MenuItem }) => {
@@ -12,7 +13,7 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
   const qty = cartItem?.quantity || 0;
 
   const formatPrice = (p: number) => p.toLocaleString('ru-RU') + ' ' + ui.currency[lang];
-  const img = categoryImages[item.category] || fallbackImage;
+  const img = dishImages[item.id] || categoryImages[item.category] || fallbackImage;
 
   return (
     <div className="group rounded-xl overflow-hidden bg-card border border-border hover:border-primary/40 transition-colors">
