@@ -8,7 +8,7 @@ import { categories } from '@/data/translations';
 import { useLang } from '@/context/LangContext';
 
 const Index = () => {
-  const [activeCategory, setActiveCategory] = useState('salads');
+  const [activeCategory, setActiveCategory] = useState('sets');
   const { lang } = useLang();
   const filtered = menuItems.filter(i => i.category === activeCategory);
 

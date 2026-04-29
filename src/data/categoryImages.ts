@@ -4,6 +4,7 @@ const u = (id: string, w = 600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&h=${w}&q=80`;
 
 export const categoryImages: Record<string, string> = {
+  sets: u('1579871494447-9811cf80d66c'),            // sushi & pizza sharing set
   salads: u('1512621776951-a57141f2eefd'),         // fresh gourmet salad
   hot_appetizers: u('1541592106381-b31e9677c0e5'), // crispy cheese sticks
   soups: u('1547592180-85f173990554'),             // hot soup bowl

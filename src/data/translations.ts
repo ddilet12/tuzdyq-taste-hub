@@ -17,6 +17,7 @@ export const ui: Record<string, Record<Lang, string>> = {
 };
 
 export const categories: Record<string, Record<Lang, string>> = {
+  sets: { ru: "Сеты", kz: "Сеттер", en: "Sets" },
   salads: { ru: "Салаты", kz: "Салаттар", en: "Salads" },
   hot_appetizers: { ru: "Горячие закуски", kz: "Ыстық тағамдар", en: "Hot Appetizers" },
   soups: { ru: "Супы", kz: "Сорпалар", en: "Soups" },
