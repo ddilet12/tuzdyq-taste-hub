@@ -3,6 +3,7 @@ export type Lang = 'ru' | 'kz' | 'en';
 export const ui: Record<string, Record<Lang, string>> = {
   workingHours: { ru: 'Ежедневно 09:00–02:00', kz: 'Күнделікті 09:00–02:00', en: 'Daily 09:00–02:00' },
   address: { ru: 'Алматы, Ғажайып 5/5', kz: 'Алматы, Ғажайып 5/5', en: 'Almaty, Gazhayip 5/5' },
+  address2: { ru: 'Филиал 2 — ТЦ', kz: 'Филиал 2 — СО', en: 'Branch 2 — Mall' },
   cart: { ru: 'Корзина', kz: 'Себет', en: 'Cart' },
   total: { ru: 'Итого', kz: 'Барлығы', en: 'Total' },
   sendWhatsApp: { ru: 'Отправить в WhatsApp', kz: 'WhatsApp-қа жіберу', en: 'Send via WhatsApp' },
