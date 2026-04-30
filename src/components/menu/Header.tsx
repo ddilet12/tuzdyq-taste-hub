@@ -38,9 +38,13 @@ const Header = () => {
         <Clock className="w-3 h-3" />
         <span>{ui.workingHours[lang]}</span>
       </div>
+      <div className="flex items-center gap-1.5 text-muted-foreground text-xs mb-1">
+        <MapPin className="w-3 h-3" />
+        <a href="https://go.2gis.com/DB8WE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">{ui.address[lang]}</a>
+      </div>
       <div className="flex items-center gap-1.5 text-muted-foreground text-xs mb-3">
         <MapPin className="w-3 h-3" />
-        <span>{ui.address[lang]}</span>
+        <a href="https://2gis.kz/almaty/geo/70000001113632201" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">{ui.address2[lang]}</a>
       </div>
 
       {/* Social links */}
