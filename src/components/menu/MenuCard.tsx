@@ -2,8 +2,6 @@ import { useLang } from '@/context/LangContext';
 import { useCart } from '@/context/CartContext';
 import { ui } from '@/data/translations';
 import type { MenuItem } from '@/data/menuItems';
-import { categoryImages, fallbackImage } from '@/data/categoryImages';
-import { dishImages } from '@/data/dishImages';
 import { Plus, Minus } from 'lucide-react';
 
 const MenuCard = ({ item }: { item: MenuItem }) => {
