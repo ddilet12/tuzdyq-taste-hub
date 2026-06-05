@@ -2,8 +2,6 @@ import { useLang } from '@/context/LangContext';
 import { useCart } from '@/context/CartContext';
 import { ui } from '@/data/translations';
 import type { MenuItem } from '@/data/menuItems';
-import { categoryImages, fallbackImage } from '@/data/categoryImages';
-import { dishImages } from '@/data/dishImages';
 import { Plus, Minus } from 'lucide-react';
 
 const MenuCard = ({ item }: { item: MenuItem }) => {
@@ -13,19 +11,11 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
   const qty = cartItem?.quantity || 0;
 
   const formatPrice = (p: number) => p.toLocaleString('ru-RU') + ' ' + ui.currency[lang];
-  const img = dishImages[item.id] || categoryImages[item.category] || fallbackImage;
 
   return (
-    <div className="group rounded-xl overflow-hidden bg-card border border-border hover:border-primary/40 transition-colors">
-      <div className="aspect-square overflow-hidden bg-secondary">
-        <img
-          src={img}
-          alt={item.name[lang]}
-          loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-      </div>
+    <div className="group rounded-xl bg-card border border-border hover:border-primary/40 transition-colors">
       <div className="p-3 flex flex-col gap-1.5">
+
         <h3 className="text-sm font-semibold text-foreground leading-tight line-clamp-2 min-h-[2.5rem]">
           {item.name[lang]}
         </h3>
