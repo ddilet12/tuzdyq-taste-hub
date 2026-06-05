@@ -25,11 +25,12 @@ const CartDrawer = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="fixed bottom-6 right-6 z-50 bg-primary text-primary-foreground rounded-full px-5 py-3.5 shadow-lg flex items-center gap-2.5 hover:bg-primary/90 transition-all active:scale-95">
-          <ShoppingCart className="w-5 h-5" />
-          <span className="font-semibold text-sm">{totalItems}</span>
-          <span className="text-xs opacity-80">|</span>
-          <span className="font-semibold text-sm">{formatPrice(totalPrice)}</span>
+        <button className="fixed bottom-0 left-0 right-0 z-50 bg-primary text-primary-foreground px-5 py-4 shadow-[0_-4px_20px_rgba(0,0,0,0.3)] flex items-center justify-between hover:bg-primary/90 transition-all active:scale-[0.99]">
+          <div className="flex items-center gap-2.5">
+            <ShoppingCart className="w-5 h-5" />
+            <span className="font-semibold text-base">{ui.cart[lang]} ({totalItems})</span>
+          </div>
+          <span className="font-bold text-base">{formatPrice(totalPrice)}</span>
         </button>
       </SheetTrigger>
       <SheetContent side="bottom" className="bg-background border-border rounded-t-2xl max-h-[80vh] flex flex-col">

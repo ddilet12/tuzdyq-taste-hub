@@ -17,11 +17,11 @@ const Index = () => {
       <Header />
       <CategoryTabs active={activeCategory} onSelect={setActiveCategory} />
 
-      <main className="px-4 py-4 pb-24">
-        <h2 className="text-lg font-semibold text-foreground mb-3">
+      <main className="px-3 py-3 pb-28">
+        <h2 className="text-lg font-semibold text-foreground mb-3 px-1">
           {categories[activeCategory][lang]}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 gap-2.5">
           {filtered.map(item => (
             <MenuCard key={item.id} item={item} />
           ))}
