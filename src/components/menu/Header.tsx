@@ -1,7 +1,8 @@
 import { useLang } from '@/context/LangContext';
 import { ui } from '@/data/translations';
 import type { Lang } from '@/data/translations';
-import logo from '@/assets/tuzdyq-hero.jpeg';
+import logoAsset from '@/assets/tuzdyq-logo.png.asset.json';
+const logo = logoAsset.url;
 import { MapPin, Clock } from 'lucide-react';
 
 const langs: { key: Lang; label: string }[] = [
