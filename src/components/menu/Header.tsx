@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="flex flex-col items-center pt-4 pb-3 px-4">
-      <img src={logo} alt="TUZDYQ" className="w-full max-w-sm rounded-2xl border border-primary/40 object-cover mb-3 shadow-lg max-h-48" />
+      <img src={logo} alt="TUZDYQ" className="w-full max-w-sm h-auto rounded-2xl border border-primary/40 object-contain mb-3 shadow-lg" />
 
       {/* Language switcher */}
       <div className="flex gap-1.5 mb-2.5">
